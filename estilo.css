@@ -58,3 +58,125 @@
   header .logo:hover {
     filter: invert(0.1); /*Controla o nível de contraste*/
   }
+
+  header ul {
+    position: relative;
+    display: flex; /*Põe os inks em linha */
+  }
+
+  header ul li {
+    list-style: none; /*Remove o estilo da linha (bolinha)*/
+  }
+
+  header ul li a {
+    display: inline-block; /* Garante que o link fique sempre em linha*/
+    color: var(--corSecundaria);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 40px;
+  }
+
+  header ul li a:hover {
+
+    background-color: var(--corPrimaria);
+    color: var(--corTerciaria);
+    border-radius: 20px;
+
+  }
+
+  /* _________________________________________________________________________________ */
+  /* Conteudo */
+
+  .conteudo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .conteudo .textoPrincipal {
+    position: relative;
+    max-width: 600px; /*Largura área do texto*/
+  }
+
+  .conteudo .textoPrincipal h2 {
+    color: var(--corSecundaria);
+    font-size: 2.5em; /*1em = 1 x tamanho da fonte elemento (16px)*/
+    line-height: 1.5em; /*Espaçamento vertical*/
+    font-weight: 400;
+
+  }
+
+  .conteudo .textoPrincipal h2 span {
+    color: var(--corPrimaria);
+    font-size: 1.2em;
+    font-weight: 900;
+
+  }
+
+  .conteudo .textoPrincipal p {
+    color: var(--corSecundaria);
+  }
+
+  /* Botão */
+  .conteudo .textoPrincipal a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: var(--corPrimaria);
+    color: var(--corTerciaria);
+    border-radius: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  .conteudo .textoPrincipal a:hover {
+    background: var(--corSecundaria);
+    color: var(--corTerciaria);
+  }
+
+  /* _________________________________________________________________________________ */
+  /* Sorvete */
+
+  .conteudo .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+  }
+
+  .conteudo .imgBox img{
+    max-width: 340px;
+
+  }
+
+  /* Sorvetes pequernos */
+  .sorvetes {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%); /*compensa o ajuste centralizado*/
+    display: flex;
+  }
+  
+  .sorvetes li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer; /*Transforma o cursor em uma mão*/
+    transition: 0.5s; /*Tempo de transição*/
+  }
+
+  .sorvetes li:hover {
+    transform: translateY(-15px);
+
+  }
+
+ .pq {
+    max-width: 60px;
+ }
