@@ -1,182 +1,327 @@
-/* Importando a font Poppins (Google fonts) */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,900;1,200;1,600&display=swap');
+/* Importando a font Poppins (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,200;1,600&display=swap');
 
-  /* ___________________________________________________________________________ */
-  /* Reset (Básico) */
+/* ____________________________________________________________ */
+/* Reset (Básico) */
 
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-  html {
-    /* Variáveis css */
+html {
+  /* Variáveis em CSS */
 
-    --corPrimaria: #017143; 
+  --corPrimaria: #017143;
 
-    --corSecundaria: #333;
+  --corSecundaria: #333;
 
-    --corTerciaria: #fff;
-  }
+  --corTerciaria: #fff;
+}
 
-  /* ____________________________________________________________________________ */
-  /* Main */
+/* ____________________________________________________________ */
+/* Main */
 
-  main {
-    position: relative;
-    width: 100%;
-    min-height: 100vh; /*Altura de 1 tela (view heigth)*/
-    padding: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--corTerciaria); /*Chamada de variável */
+main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Altura de 1 tela (view height) */
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--corTerciaria);
+}
 
-  }
+/* ____________________________________________________________ */
+/* Header */
 
-  /* __________________________________________________________________________________ */
-  /* Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo:hover {
+  filter: invert(0.1); /* Controla o nível de contraste */
+}
+
+header ul {
+  position: relative;
+  display: flex; /* Põe os links em linha (Menu) */
+}
+
+header ul li {
+  list-style: none; /* Remove o estilo da linha (Bolinha) */
+}
+
+header ul li a {
+  display: inline-block; /* Garante que o link fique sempre em linha */
+  color: var(--corSecundaria);
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 5px;
+  margin-left: 40px;
+}
+
+header ul li a:hover {
+  background-color: var(--corPrimaria);
+  color: var(--corTerciaria);
+  border-radius: 20px;
+}
+
+/* ____________________________________________________________ */
+/* Conteúdo */
+
+.conteudo {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conteudo .textoPrincipal {
+  position: relative;
+  max-width: 600px; /* Largura área de texto */
+}
+
+.conteudo .textoPrincipal h2 {
+  color: var(--corSecundaria);
+  font-size: 2.5em; /* 1em = 1 x tamanho fonte elemento (16px) */
+  line-height: 1.5em; /* Espaçamento vertical */
+  font-weight: 400;
+}
+
+.conteudo .textoPrincipal h2 span {
+  color: var(--corPrimaria);
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.conteudo .textoPrincipal h2 p {
+  color: var(--corSecundaria);
+}
+
+/* Botão */
+
+.conteudo .textoPrincipal a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: var(--corPrimaria);
+  color: var(--corTerciaria);
+  border-radius: 40px;
+  font-family: 600;
+  letter-spacing: 1px; /* Espaço entre os caracteres */
+  text-decoration: none;
+}
+
+.conteudo .textoPrincipal a:hover {
+  background: var(--corSecundaria);
+  color: var(--corTerciaria);
+}
+
+ /* ____________________________________________________________ */
+/* Sorvete */
+
+.conteudo .imgBox {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+
+.conteudo .imgBox img {
+  max-width: 340px; 
+}
+
+/* sorvetes pequenos */
+
+.sorvetes {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%); /* Compensa o ajuste centralizando */
+  display: flex;
+}
+
+.sorvetes li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer; /* Transforma o cursor em uma mão */
+  transition: 0.5s; /* Tempo de transição */
+}
+
+.sorvetes li:hover {
+  transform: translateY(-15px); /* Movimenta 15 no eixo Y */
+}
+
+.sorvetes li img {
+  max-width: 60px;
+} 
+
+/* Imagem das redes sociais */ 
+
+.sociais {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sociais li {
+  list-style: none;
+}
+
+.sociais li a {
+  display: inline-block;
+  margin: 5px 0;
+  transform: scale(0.6); /* Reduz o tamanho dos ícones */
+  filter: invert(1); /* Inverte a cor para branco */
+}
+
+.sociais li a:hover {
+  /* color #333; */
+  color: var(--corSecundaria);
+  filter: invert(0);
+}
+
+/* __________________________________________________________________ */
+/* Cículo */
+
+.circulo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* background: #017143; */
+  background: var(--corPrimaria);
+
+  /* Tamanho -> Lado -> Posição */
+  clip-path: circle(600px at right 800px);
+}
+
+/* Abaixo de 992px */
+
+@media (max-width: 992px) {
 
   header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
   }
 
   header .logo {
-    position: relative;
-    max-width: 80px;
-  }
-
-  header .logo:hover {
-    filter: invert(0.1); /*Controla o nível de contraste*/
+    max-width: 60px; /* Era 80px agora vira 60px (Reduz) */
   }
 
   header ul {
-    position: relative;
-    display: flex; /*Põe os inks em linha */
+    display: none; /* Esconde o menu abaixo de 992px */
   }
 
-  header ul li {
-    list-style: none; /*Remove o estilo da linha (bolinha)*/
+  /* Menu Hambúrguer */
+
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(assets/menu.png); /* Imagem do hamburguer */
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    z-index: 11;
+  }
+
+  .toggle.active {
+    position: fixed;
+    right: 20px;
+    background: url(assets/close.png); /* Imagem do X (Fechar) */
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Menu hamburguer ativado (Forma de lista) */
+  header ul.links.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura do hamburguer quando ativo */
+    height: 45%; /* Altura da lista quando ativo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    z-index: 10;
   }
 
   header ul li a {
-    display: inline-block; /* Garante que o link fique sempre em linha*/
-    color: var(--corSecundaria);
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 5px;
-    margin-left: 40px;
+    font-size: 1.5em;
+    margin: 5px 0;
   }
 
-  header ul li a:hover {
+  /* _____________________________________ */
+  /* Neste ponto fazer JS (1° Função */
 
-    background-color: var(--corPrimaria);
-    color: var(--corTerciaria);
-    border-radius: 20px;
+  /* Conteúdo */
 
+  main {
+    padding: 20px 20px 120px;
   }
-
-  /* _________________________________________________________________________________ */
-  /* Conteudo */
 
   .conteudo {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .conteudo .textoPrincipal {
-    position: relative;
-    max-width: 600px; /*Largura área do texto*/
+    flex-direction: column; /* Joga o conteudo em colunas (Blocos) */
+    margin-top: 100px;
   }
 
   .conteudo .textoPrincipal h2 {
-    color: var(--corSecundaria);
-    font-size: 2.5em; /*1em = 1 x tamanho da fonte elemento (16px)*/
-    line-height: 1.5em; /*Espaçamento vertical*/
-    font-weight: 400;
-
+    font-size: 2.5em;
+    margin-bottom: 15px;
   }
 
-  .conteudo .textoPrincipal h2 span {
-    color: var(--corPrimaria);
-    font-size: 1.2em;
-    font-weight: 900;
-
+  .conteudo .textoPrincipal {
+    max-width: 100%;
   }
 
-  .conteudo .textoPrincipal p {
-    color: var(--corSecundaria);
+  .conteudo .imgBox {
+    max-width: 300px;
   }
 
-  /* Botão */
-  .conteudo .textoPrincipal a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 8px 20px;
+  .thumb li img {
+    max-width: 40px;
+  }
+
+  .circulo {
+    clip-path: circle(400px at center bottom);
+  }
+
+  .sociais {
+    /* Estiliza os sociais  */
+    /* background: #017143 */
     background: var(--corPrimaria);
-    color: var(--corTerciaria);
-    border-radius: 40px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-decoration: none;
+    right: 0;
+    width: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
 
-  .conteudo .textoPrincipal a:hover {
-    background: var(--corSecundaria);
-    color: var(--corTerciaria);
-  }
-
-  /* _________________________________________________________________________________ */
-  /* Sorvete */
-
-  .conteudo .imgBox{
-    width: 600px;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 50px;
-    margin-top: 50px;
-  }
-
-  .conteudo .imgBox img{
-    max-width: 340px;
-
-  }
-
-  /* Sorvetes pequernos */
-  .sorvetes {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    transform: translate(-50%); /*compensa o ajuste centralizado*/
-    display: flex;
-  }
-  
-  .sorvetes li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    cursor: pointer; /*Transforma o cursor em uma mão*/
-    transition: 0.5s; /*Tempo de transição*/
-  }
-
-  .sorvetes li:hover {
-    transform: translateY(-15px);
-
-  }
-
- .pq {
-    max-width: 60px;
- }
+  /* Fazer o restante do JS (2° e 3° funções */
+}
